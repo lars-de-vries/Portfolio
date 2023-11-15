@@ -1,0 +1,316 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+
+/* naar een idee van Jen Simmons */
+*, *::after, *::before {
+  box-sizing:border-box;
+}
+
+body {
+  margin:0;
+}
+
+button:not([disabled]) {
+  cursor:pointer;
+}
+
+img {
+  max-width:100%;
+}
+
+
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+
+:root {
+  --color-headings: #161616;
+  --color-background: #F9F8F4;
+  --color-text: #16161680;
+  --color-borders: #16161630;
+
+  --color-text-buttons: #F9F8F4;
+  --color-buttons: #0A5168;
+  --color-buttons-hover: #BFFF0F;
+
+
+  --color-footer-background: #F2F0E8;
+
+}
+
+
+
+
+
+/********************/
+/* ALGEMENE STYLING */
+/********************/
+
+h1, h2 {
+  font-family: 'Satoshi', sans-serif;
+  color: var(--color-headings);
+  font-size: clamp(1.5rem, 2.75vw, 3.75rem);
+  font-weight: 500;
+}
+
+h3 {
+  font-family: 'Satoshi', sans-serif;
+  color: var(--color-headings);
+  font-size: clamp(1.125rem, 1.5vw, 2rem);
+  font-weight: 500;
+  margin: 0;
+}
+
+h4 {
+  font-family: 'Satoshi', sans-serif;
+  color: var(--color-borders);
+  font-size: clamp(1rem, 1.25vw, 1.5rem);
+  line-height: 1.5;
+  margin: 0;
+  padding: 1em 0;
+}
+
+
+p, a {
+  font-family: 'Satoshi', sans-serif;
+  color: var(--color-text);
+  font-size: clamp(1rem, 1.25vw, 1.5rem);
+  line-height: 1.5;
+  margin: 0;
+}
+
+
+p span {
+  color: var(--color-borders);
+  font-weight: 700;
+}
+
+
+a {
+  font-family: 'Satoshi', sans-serif;
+  text-decoration: none;
+}
+
+
+h1 span, h2 span, h3 span {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.button-primary {
+  display: inline-block;
+  color: var(--color-text-buttons);
+  padding: 1.25em 2em;
+  background: var(--color-buttons);
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+
+.button-primary:hover {
+  color: var(--color-buttons);
+  background: var(--color-buttons-hover);
+}
+
+.button-secundary {
+  display: inline-block;
+  color: var(--color-headings);
+  padding: 1.25em 2em;
+  background: none;
+  border: 1px solid var(--color-borders);
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.5s ease;
+}
+
+.button-secundary:hover {
+  color: var(--color-buttons);
+  background: var(--color-buttons-hover);
+  border: 1px solid #00000000;
+}
+
+
+
+body {
+  background: var(--color-background);
+}
+
+main, footer {
+  padding: 0 1em;
+
+}
+
+
+@media (min-width: 768px) {
+	header, main, footer{
+    padding: 0 8%;
+  }
+}
+
+@media (min-width: 1920px) {
+	header, main, footer{
+    padding: 0 12%;
+    max-width: 150em;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 150em) {
+	header, main, footer{
+    padding: 0 10em;
+  }
+}
+
+
+
+
+header div {
+  display: none;
+}
+
+
+@media (min-width: 768px) {
+	header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1em;
+  }
+
+  header ul {
+    display: flex;
+    align-items: center;
+    gap: 4em;
+    list-style: none;
+  }
+
+  header a {
+    color: var(--color-headings);
+  }
+
+  
+  header img {
+    width: 25px;
+  }
+}
+
+
+
+
+
+
+
+section {
+  margin-bottom: 8em;
+}
+
+.hero h1 {
+  width: 90%;
+  margin-bottom: 1em;
+}
+
+
+.wat-ik-kan {
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+}
+
+@media (min-width: 768px) {
+  .wat-ik-kan {
+    flex-direction: row;
+    position: relative;
+    align-items: flex-start;
+  }
+
+  .wat-ik-kan h2 {
+    position: sticky;
+    top: 3em;
+    width: 100%;
+  }
+}
+
+
+
+.wat-ik-kan h3 {
+  border-top: 1px solid var(--color-borders);
+  padding: 1em 0;
+}
+
+.wat-ik-kan > div > div {
+  margin-bottom: 5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+.recent-werk > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .recent-werk > div {
+      flex-direction: row;
+  }
+}
+
+
+.project-image {
+  border-radius: 10px;
+  transition: 3s ease-in-out;
+  overflow: hidden;
+
+}
+
+.project-image img {
+  transition: 1s ease;
+  object-fit: cover;
+}
+
+.project-image:hover img {
+  transform: scale(1.1);
+}
+
+.recent-werk p {
+  font-weight: 400;
+  color: var(--color-headings);
+  margin-top: 0.5em;
+}
+
+
+
+
+
+
+
+footer {
+  background: var(--color-footer-background);
+}
+
+
+footer div:nth-of-type(1) {
+  padding: 3em 0;
+
+}
+
+footer div:nth-of-type(2) {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--color-borders);
+  padding: 1em 0;
+}
