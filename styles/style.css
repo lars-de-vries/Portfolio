@@ -252,7 +252,7 @@ nav.menu-active button {
 }
 
 nav.menu-active button img {
-  content: url('./images/hamburger-close.svg');
+  content: url('../images/hamburger-close.svg');
 }
 
 
