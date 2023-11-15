@@ -98,7 +98,7 @@ a {
 }
 
 
-h1 span, h2 span, h3 span {
+h1 span, h2 span, h3 span, .current-page {
   font-family: 'Playfair Display', serif;
   font-weight: 500;
   font-style: italic;
@@ -210,7 +210,8 @@ header div {
 
 header ul {
   margin: 0;
-  padding:4em 1em 0;
+  padding: 0;
+  /* padding:4em 1em 0; */
   list-style: none;
   background: var(--color-buttons);
   position:fixed;
@@ -224,14 +225,17 @@ header ul {
 
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
 
   z-index: 999;
 }
 
 /* opmaak van text in hamburger menu */
 header li a{
-  color: black;
-  font-size: clamp(2.5rem, 10vw, 4rem);
+  color: var(--color-text-buttons);
+  font-size: clamp(3rem, 12vw, 4.5rem);
 }
 
 /* haalt contact-knop weg */
@@ -254,7 +258,6 @@ nav.menu-active button {
 nav.menu-active button img {
   content: url('../images/hamburger-close.svg');
 }
-
 
 
 @media (min-width: 768px) {
