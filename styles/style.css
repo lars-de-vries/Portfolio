@@ -184,16 +184,20 @@ header, main, footer {
 header img {
   width: 25px;
   position: relative;
-  z-index: 9999;
+  z-index: 99;
   
 }
 
 header button {
   padding: 1em;
   border: 1px solid var(--color-borders);
-  background: none;
+  background: var(--color-background);
   border-radius: 50px;
   display: flex;
+  position: fixed;
+  right: 1em;
+  top: 1em;
+  z-index: 9999;
 }
 
 header div {
@@ -240,8 +244,15 @@ nav.menu-active ul {
   transform: translatex(0);
 }
 
+
+
+nav.menu-active button {
+  background: none;
+  border: 1px solid #ffffff30;
+}
+
 nav.menu-active button img {
-  content:url('./images/hamburger-close.svg');
+  content: url('/images/hamburger-close.svg');
 }
 
 
