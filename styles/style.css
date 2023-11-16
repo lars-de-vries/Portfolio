@@ -55,7 +55,7 @@ html{
 h1, h2 {
   font-family: 'Satoshi', sans-serif;
   color: var(--color-headings);
-  font-size: clamp(1.5rem, 2.75vw, 3.75rem);
+  font-size: clamp(2rem, 2.75vw, 3.75rem);
   font-weight: 500;
 }
 
@@ -151,18 +151,18 @@ body {
 
 /* ---- WHITE SPACE ---- */
 
-header, main, footer {
+header, main, #footer {
   padding: 0 1em;
 }
 
 @media (min-width: 768px) {
-	header, main, footer{
+	header, main, #footer{
     padding: 0 8%;
   }
 }
 
 @media (min-width: 1920px) {
-	header, main, footer{
+	header, main, #footer{
     padding: 0 12%;
     max-width: 150em;
     margin: 0 auto;
@@ -170,7 +170,7 @@ header, main, footer {
 }
 
 @media (min-width: 150em) {
-	header, main, footer{
+	header, main, #footer{
     padding: 0 10em;
   }
 }
@@ -302,19 +302,19 @@ footer {
   background: var(--color-footer-background);
 }
 
-footer div:nth-of-type(1) {
+footer div div:nth-of-type(1) {
   padding: 4em 0;
 }
 
-footer div:nth-of-type(1) p{
+footer div div:nth-of-type(1) p{
   margin-bottom: 2em;
 }
 
-footer div:nth-of-type(1) a:nth-of-type(2){
+footer div div:nth-of-type(1) a:nth-of-type(2){
   margin-left: 0.5em;
 }
 
-footer div:nth-of-type(2) {
+footer div div:nth-of-type(2) {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -323,8 +323,7 @@ footer div:nth-of-type(2) {
 }
 
 
-
-footer div:nth-of-type(2) p {
+footer div div:nth-of-type(2) p {
   font-size: clamp(0.75rem, 1vw, 1.25rem);
 }
 
@@ -337,13 +336,38 @@ footer div:nth-of-type(2) p {
 
 
 section {
-  margin-bottom: 8em;
+  margin: 8rem 0;
+}
+
+section:first-of-type {
+  margin-bottom: 12rem;
+}
+
+@media (min-width: 1280px) {
+	section{
+    margin: 10rem 0;
+  }
+
+  section:first-of-type {
+    margin: 8rem 0 14rem 0;
+  }
+}
+
+@media (min-width: 1920px) {
+	section{
+    margin: 20rem 0;
+  }
+  section:first-of-type {
+    margin: 15rem 0 28rem 0;
+  }
 }
 
 
-.hero {
+
+
+/* .hero {
   margin: 6em 0 12em 0;
-}
+} */
 
 .hero h1 {
   margin: 0;
@@ -358,6 +382,11 @@ section {
   width: 80%;
 }
 
+@media (min-width: 768px) {
+  .hero p{
+    width: 80%;
+  }
+}
 
 .wat-ik-kan {
   display: flex;
@@ -365,7 +394,7 @@ section {
   gap: 10%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1080px) {
   .wat-ik-kan {
     flex-direction: row;
     position: relative;
