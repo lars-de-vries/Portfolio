@@ -30,17 +30,26 @@ html{
 /*********************/
 
 :root {
-  --color-headings: #161616;
-  --color-background: #F9F8F4;
-  --color-text: #16161680;
-  --color-borders: #16161630;
-
-  --color-text-buttons: #F9F8F4;
-  --color-buttons: #0A5168;
-  --color-buttons-hover: #BFFF0F;
-
+  --color-headings: #F2F0E8;
+  --color-background: #0A5168;
+  --color-text: #F2F0E890;
 
   --color-footer-background: #F2F0E8;
+  --color-footer-headings: #161616;
+  --color-footer-text: #16161685;
+  --color-footer-border: #16161630;
+
+
+  --color-borders: #F2F0E830;
+
+  --color-text-buttons: #0A5168;
+  --color-buttons: #F2F0E8;
+  --color-buttons-hover: #BFFF0F;
+
+  --color-menu: #BFFF0F;
+
+
+  --color-cursor: #BFFF0F;
 
 }
 
@@ -77,7 +86,7 @@ h4 {
 }
 
 
-p, a {
+p, a, button {
   font-family: 'Satoshi', sans-serif;
   color: var(--color-text);
   font-size: clamp(1rem, 1.5vw, 1.5rem);
@@ -98,20 +107,30 @@ a {
 }
 
 
-h1 span, h2 span, h3 span, .current-page {
+h1 span, h2 span, h3 span {
   font-family: 'Playfair Display', serif;
   font-weight: 500;
   font-style: italic;
 }
 
-
+@media (max-width: 768px) {
+  .current-page {
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+  }
+}
 
 /* ---- BUTTONS ---- */
+
+button {
+  border: none;
+}
 
 .button-primary {
   display: inline-block;
   color: var(--color-text-buttons);
-  padding: 1.25em 2em;
+  padding: 1em 1.75em;
   background: var(--color-buttons);
   border-radius: 50px;
   text-decoration: none;
@@ -119,14 +138,14 @@ h1 span, h2 span, h3 span, .current-page {
 }
 
 .button-primary:hover {
-  color: var(--color-buttons);
   background: var(--color-buttons-hover);
 }
 
 .button-secundary {
   display: inline-block;
   color: var(--color-headings);
-  padding: 1.25em 2em;
+  /* padding: 1.25em 2em; */
+  padding: 1em 1.75em;
   background: none;
   border: 1px solid var(--color-borders);
   border-radius: 50px;
@@ -135,7 +154,7 @@ h1 span, h2 span, h3 span, .current-page {
 }
 
 .button-secundary:hover {
-  color: var(--color-buttons);
+  color: var(--color-background);
   background: var(--color-buttons-hover);
   border: 1px solid #00000000;
 }
@@ -213,7 +232,7 @@ header ul {
   padding: 0;
   /* padding:4em 1em 0; */
   list-style: none;
-  background: var(--color-buttons);
+  background: var(--color-menu);
   position:fixed;
   left:0;
   right:0;
@@ -298,6 +317,19 @@ nav.menu-active button img {
 /*      FOOTER      */
 /********************/
 
+footer h2 {
+  color: var(--color-footer-headings);
+}
+
+footer p {
+  color: var(--color-footer-text);
+}
+
+footer .button-secundary {
+  color: var(--color-footer-headings);
+  border: 1px solid var(--color-footer-border);
+}
+
 footer {
   background: var(--color-footer-background);
 }
@@ -318,7 +350,7 @@ footer div div:nth-of-type(2) {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid var(--color-borders);
+  border-top: 1px solid var(--color-footer-border);
   padding: 1.5em 0;
 }
 
@@ -326,7 +358,6 @@ footer div div:nth-of-type(2) {
 footer div div:nth-of-type(2) p {
   font-size: clamp(0.75rem, 1vw, 1.25rem);
 }
-
 
 
 
@@ -379,7 +410,6 @@ section:first-of-type {
   font-size: clamp(1.5rem, 2.75vw, 3.75rem);
   font-weight: 400;
   margin-bottom: 0.5em;
-  width: 80%;
 }
 
 @media (min-width: 768px) {
@@ -388,10 +418,28 @@ section:first-of-type {
   }
 }
 
+
+
+
+
+
+
 .wat-ik-kan {
   display: flex;
   flex-direction: column;
   gap: 10%;
+}
+
+.wat-ik-kan > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+  flex-basis: 70%;
+}
+
+.wat-ik-kan h3 {
+  border-top: 1px solid var(--color-borders);
+  padding: 1em 0;
 }
 
 @media (min-width: 1080px) {
@@ -404,24 +452,56 @@ section:first-of-type {
   .wat-ik-kan h2 {
     position: sticky;
     top: 3em;
-    width: 100%;
+
+    flex-basis: 30%;
   }
 }
 
 
 
-.wat-ik-kan h3 {
-  border-top: 1px solid var(--color-borders);
-  padding: 1em 0;
+
+
+
+
+
+
+
+.text-2kolom {
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
 }
 
-.wat-ik-kan > div > div {
-  margin-bottom: 5em;
+.text-2kolom div {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5em;
+  align-items: flex-start;
 }
 
 
+@media (min-width: 1080px) {
+  .text-2kolom {
+    flex-direction: row;
+    align-items: flex-start;
 
+    /* sticky */
+    position: relative;
+  }
 
+  .text-2kolom h2 {
+    flex-basis: 30%;
+    margin: 0;
+
+    /* sticky */
+    position: sticky;
+    top: 3em;
+  }
+
+  .text-2kolom div {
+    flex-basis: 70%;
+  }
+}
 
 
 
@@ -446,7 +526,7 @@ section:first-of-type {
   border-radius: 10px;
   transition: 3s ease-in-out;
   overflow: hidden;
-  aspect-ratio: 16/9;
+  aspect-ratio: 16/10;
 }
 
 .project-image img {
@@ -478,19 +558,22 @@ section:first-of-type {
 /****************************/
 
 
-.portfolio-page section:nth-of-type(1) {
+.portfolio-page section:nth-of-type(1), .over-mij-page section:nth-of-type(1){
   margin-bottom: 4em;
 }
 
 @media (min-width: 768px) {
-  .portfolio-page section:nth-of-type(1) {
+  .portfolio-page section:nth-of-type(1), .over-mij-page section:nth-of-type(1) {
     margin-bottom: 6em;
   }
 
-  .portfolio-page section:nth-of-type(1) > p {
+  .portfolio-page section:nth-of-type(1) > p, .over-mij-page section:nth-of-type(1) > p {
     width: 60%;
   }
 }
+
+
+
 
 
 
@@ -508,5 +591,80 @@ section:first-of-type {
 @media (min-width: 1920px) {
   .portfolio-page section:nth-of-type(2) > div {
     margin-bottom: 10rem;
+  }
+}
+
+
+
+
+
+.over-mij-page img {
+  border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+body:hover > #trailer {
+  opacity: 1;
+}
+
+#trailer {
+  height: 25px;
+  width: 25px;
+  background-color: var(--color-cursor);
+  border-radius: 50%;
+  
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 9999999999999;
+  
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 500ms ease;
+  
+  display: grid;
+  place-items: center;
+
+  transition: 0.5s;
+
+}
+
+
+#trailer img {
+  width: 0px;
+  height: 0px;
+  transition: 0.5s;
+}
+
+
+.trailer-hover {
+  height: 85px !important;
+  width: 85px !important;
+}
+
+.trailer-img-hover {
+  width: 15px !important;
+  height: 15px !important;
+}
+
+/* .padding {
+  width: 80px !important;
+  height: 80px !important;
+} */
+
+
+@media (max-width: 768px) {
+
+  #trailer {
+    display: none;
   }
 }
