@@ -196,6 +196,53 @@ header, main, #footer {
 
 
 
+
+main *{
+  opacity: 0;
+  filter: blur(1px);
+  animation-name: fade-in;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+
+
+.move-up1, .move-up2, .move-up3{
+  transform: translateY(70px);
+  animation-name: move-up;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  
+}
+
+.move-up2 {
+  animation-delay: 0.4s;
+}
+
+.move-up3 {
+  animation-delay: 0.8s;
+}
+
+@keyframes move-up {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0) rotate(0);
+  }
+}
+
+
+
+
 /********************/
 /*      HEADER      */
 /********************/
