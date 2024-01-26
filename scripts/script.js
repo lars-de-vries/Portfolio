@@ -95,3 +95,11 @@ for (var i=0; i<image.length; i++) {
   });
 }
 
+
+
+
+
+// JAARTAL IN FOOTER
+window.onload = e => {
+  document.getElementById("current-year").innerHTML = new Date().getFullYear();
+}

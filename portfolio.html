@@ -9,27 +9,25 @@
 	<title>Lars de Vries - Portfolio</title>
 	
 	<link href="styles/style.css" rel="stylesheet">
-	<link rel="icon" type="image/png+xml" href="./images/favicon-new.png">
+	<link rel="icon" type="image/png+xml" href="./images/favicon.png">
 
 	<link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,301,701,300,501,401,901,400&display=swap" rel="stylesheet">
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.typekit.net/whc4dgo.css">
 </head>
 
 <body>
 	<header>
 		<div>
-			<a href="index.html"><img src="./images/logotest.png" alt="Logo"></a>
+			<a href="index.html"><img src="./images/logo.png" alt="Logo"></a>
 			<nav>
 				<ul>
 					<li><a class="current-page" href="index.html">Home</a></li>
 					<li><a href="portfolio.html">Portfolio</a></li>
 					<li><a href="over-mij.html">Over mij</a></li>
-					<li><a class="button-secundary" href="#footer">Contact</a></li>
+					<li><a class="button-secundary" href="#footer" onclick="lenis.scrollTo('#footer')">Contact</a></li>
 				</ul>
-				<button aria-hidden="true"><img src="./images/hamburger-open.svg" alt="" /></button>
+				<button aria-hidden="true"><img src="./images/open.svg" alt="" /></button>
 			</nav>
 
 		</div>
@@ -49,7 +47,7 @@
 
             <div class="projecten move-up3">
                 <div class="project-image">
-                    <a href="revi.html"><img class="cursor-arrow" src="./images/1610test.png" alt=""></a>
+                    <a href="revi.html"><img class="cursor-arrow" src="./images/revi/revi_large.png" alt=""></a>
                 </div>
                 <p>Revi circulaire meubels <span>2023</span></p>
             </div>
@@ -58,14 +56,14 @@
                 <div>
                     <div>
                         <div class="project-image">
-                            <a href="ahdeals.html"><img class="cursor-arrow" src="./images/ah16102.png" alt=""></a>
+                            <a href="ahdeals.html"><img class="cursor-arrow" src="./images/ah/ah_large.png" alt=""></a>
                         </div>
                         <p>Albert Heijn Deals <span>2023</span></p>
                     </div>
         
                     <div>
                         <div class="project-image">
-                            <a href="jamesbond.html"><img class="cursor-arrow" src="./images/jbtest2.png" alt=""></a>
+                            <a href="jamesbond.html"><img class="cursor-arrow" src="./images/jb/jamesbond_large.png" alt=""></a>
                         </div>
                         <p>Tijdlijn James Bond <span>2023</span></p>
                     </div>
@@ -74,23 +72,23 @@
 
             <div class="projecten">
                 <div class="project-image">
-                    <a href="cityplanner.html"><img class="cursor-arrow" src="./images/1610test.png" alt=""></a>
+                    <a href="ruimtepuin.html"><img class="cursor-arrow" src="./images/ruimtepuin/ruimtepuin_large_new.png" alt=""></a>
                 </div>
-                <p>Cityplanner <span>2022</span></p>
+                <p>Een hemel vol ruimtepuin <span>2023</span></p>
             </div>
 
             <div class="projecten-2kolom">
                 <div>
                     <div>
                         <div class="project-image">
-                            <a href="plogdedag.html"><img class="cursor-arrow" src="./images/1610test.png" alt=""></a>
+                            <a href="cityplanner.html"><img class="cursor-arrow" src="./images/cityplanner/cityplanner_large.png" alt=""></a>
                         </div>
-                        <p>Plog de dag Rotterdam <span>2022</span></p>
+                        <p>Cityplanner <span>2022</span></p>
                     </div>
         
                     <div>
                         <div class="project-image">
-                            <a href="boekenzoeker.html"><img class="cursor-arrow" src="./images/1610test.png" alt=""></a>
+                            <a href="boekenzoeker.html"><img class="cursor-arrow" src="./images/boekenzoeker/boekenzoeker_large.png" alt=""></a>
                         </div>
                         <p>Boekenzoeker Gemeente Amsterdam <span>2021</span></p>
                     </div>
@@ -122,13 +120,13 @@
 			<div>
 				<h2>Kom met mij in <span>contact</span></h2>
 				<p>Wil je met mij in contact komen of heb je een andere vraag?<br>Stuur me gerust een mail of een berichtje op LinkedIn!</p>
-				<a class="button-secundary" href="">E-mail</a>
-				<a class="button-secundary" href="">LinkedIn</a>
+				<a class="button-secundary" href="mailto: larsdevries16@gmail.com">E-mail</a>
+				<a class="button-secundary" href="https://www.linkedin.com/in/vriesdelars/" target="_blank">LinkedIn</a>
 			</div>
 	
 			<div>
-				<p>Lars de Vries</p>
-				<p>2023</p>
+				<p>© Lars de Vries</p>
+				<p id="current-year"></p>
 			</div>
 		</div>
 	</footer>
@@ -142,6 +140,22 @@
 
 
 	<script src="scripts/script.js"></script>
+	<script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+	<script>
+	// Lenis SmoothScroll
+		const lenis = new Lenis()
+		
+		lenis.on('scroll', (e) => {
+		  console.log(e)
+		})
+		
+		function raf(time) {
+		  lenis.raf(time)
+		  requestAnimationFrame(raf)
+		}
+		
+		requestAnimationFrame(raf)
+	</script>
 </body>
 	
 </html>

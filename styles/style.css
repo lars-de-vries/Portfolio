@@ -31,20 +31,21 @@ html{
 
 :root {
   --color-headings: #F2F0E8;
-  --color-background: #0A5168;
-  --color-text: #F2F0E890;
+  --color-background: #272F3F;
+  --color-text: #F2F0E880;
 
   --color-footer-background: #F2F0E8;
-  --color-footer-headings: #161616;
-  --color-footer-text: #16161685;
-  --color-footer-border: #16161630;
+  --color-footer-headings: #272F3F;
+  --color-footer-text: #272F3F95;
+  --color-footer-border: #272F3F30;
 
 
   --color-borders: #F2F0E830;
 
-  --color-text-buttons: #0A5168;
-  --color-buttons: #F2F0E8;
+  --color-text-buttons: #F2F0E880;
+  --color-buttons: #F2F0E815;
   --color-buttons-hover: #BFFF0F;
+  --color-text-buttons-hover: #272F3F;
 
   --color-menu: #BFFF0F;
 
@@ -62,61 +63,61 @@ html{
 /********************/
 
 h1, h2 {
-  font-family: 'Satoshi', sans-serif;
+  font-family: "larken", sans-serif;
   color: var(--color-headings);
   font-size: clamp(2rem, 2.75vw, 3.75rem);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 h3 {
-  font-family: 'Satoshi', sans-serif;
+  font-family: "larken", sans-serif;
   color: var(--color-headings);
-  font-size: clamp(1.125rem, 1.5vw, 2rem);
-  font-weight: 500;
+  font-size: clamp(1.125rem, 1.6vw, 2rem);
+  font-weight: 300;
   margin: 0;
 }
 
 h4 {
-  font-family: 'Satoshi', sans-serif;
+  font-family: "larken", sans-serif;
   color: var(--color-borders);
   font-size: clamp(1rem, 1.25vw, 1.5rem);
   line-height: 1.5;
   margin: 0;
   padding: 1em 0;
+  font-style: italic;
+  font-weight: 400;
 }
 
 
 p, a, button {
-  font-family: 'Satoshi', sans-serif;
+  font-family: "Satoshi", sans-serif;
   color: var(--color-text);
   font-size: clamp(1rem, 1.5vw, 1.5rem);
   line-height: 1.5;
   margin: 0;
+  font-weight: 400;
+
+  text-decoration: none;
 }
 
 
 p span {
   color: var(--color-borders);
-  font-weight: 700;
+  font-weight: 400;
 }
 
 
-a {
-  font-family: 'Satoshi', sans-serif;
-  text-decoration: none;
-}
 
 
 h1 span, h2 span, h3 span {
-  font-family: 'Playfair Display', serif;
-  font-weight: 500;
+  font-family: "larken", sans-serif;
+  font-weight: 400;
   font-style: italic;
 }
 
 @media (max-width: 768px) {
   .current-page {
     font-style: italic;
-    font-family: 'Playfair Display', serif;
     font-weight: 500;
   }
 }
@@ -135,15 +136,17 @@ button {
   border-radius: 50px;
   text-decoration: none;
   transition: 0.5s ease;
+  font-weight: 400;
 }
 
 .button-primary:hover {
   background: var(--color-buttons-hover);
+  color: var(--color-text-buttons-hover);
 }
 
 .button-secundary {
   display: inline-block;
-  color: var(--color-headings);
+  color: var(--color-text);
   /* padding: 1.25em 2em; */
   padding: 1em 1.75em;
   background: none;
@@ -151,10 +154,12 @@ button {
   border-radius: 50px;
   text-decoration: none;
   transition: 0.5s ease;
+
+  font-weight: 400;
 }
 
 .button-secundary:hover {
-  color: var(--color-background);
+  color: var(--color-text-buttons-hover);
   background: var(--color-buttons-hover);
   border: 1px solid #00000000;
 }
@@ -247,12 +252,15 @@ main *{
 /*      HEADER      */
 /********************/
 
-header img {
-  width: 25px;
+header a > img {
+  height: 32px;
+  height: clamp(2.25rem, 2.5vw, 3.5rem);
   position: relative;
   z-index: 99;
-  
+  margin-top: 1em;
 }
+
+
 
 header button {
   padding: 1em;
@@ -300,7 +308,8 @@ header ul {
 
 /* opmaak van text in hamburger menu */
 header li a{
-  color: var(--color-text-buttons);
+  color: var(--color-background);
+  font-family: "larken", sans-serif;
   font-size: clamp(3rem, 12vw, 4.5rem);
 }
 
@@ -318,15 +327,19 @@ nav.menu-active ul {
 
 nav.menu-active button {
   background: none;
-  border: 1px solid #ffffff30;
+  border: 1px solid #00000030;
 }
 
 nav.menu-active button img {
-  content: url('../images/hamburger-close.svg');
+  content: url('../images/close.svg');
 }
 
 
 @media (min-width: 768px) {
+
+  header a > img {
+    margin-top: 0em;
+  }
 
   header button {
     display:none;
@@ -351,8 +364,9 @@ nav.menu-active button img {
   }
 
   header li a {
-    font-size: clamp(1rem, 1.25vw, 1.5rem);
-    color: var(--color-headings);
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    font-family: "satoshi", sans-serif;
+    color: var(--color-text);
   }
 }
 
@@ -452,10 +466,11 @@ section:first-of-type {
 }
 
 .hero p {
-  font-family: 'Satoshi', sans-serif;
+  font-family: "larken", sans-serif;
   color: var(--color-text);
   font-size: clamp(1.5rem, 2.75vw, 3.75rem);
-  font-weight: 400;
+  font-weight: 300;
+  margin-top: 0.25em;
   margin-bottom: 0.5em;
 }
 
@@ -524,6 +539,10 @@ section:first-of-type {
   flex-direction: column;
   gap: 2.5em;
   align-items: flex-start;
+}
+
+.text-2kolom div > button, .text-2kolom div > a{
+  margin-bottom: 5em;
 }
 
 
@@ -715,3 +734,46 @@ body:hover > #trailer {
     display: none;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* Lenis CSS */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+
+
+
+
+/* a {
+  font-size: 16px !important;
+} */
+
+
+

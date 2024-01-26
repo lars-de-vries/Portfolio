@@ -9,27 +9,25 @@
 	<title>Lars de Vries - AH Deals</title>
 	
 	<link href="styles/style.css" rel="stylesheet">
-	<link rel="icon" type="image/png+xml" href="./images/favicon-new.png">
+	<link rel="icon" type="image/png+xml" href="./images/favicon.png">
 
 	<link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,301,701,300,501,401,901,400&display=swap" rel="stylesheet">
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.typekit.net/whc4dgo.css">
 </head>
 
 <body>
 	<header>
 		<div>
-			<a href="index.html"><img src="./images/logotest.png" alt="Logo"></a>
+			<a href="index.html"><img src="./images/logo.png" alt="Logo"></a>
 			<nav>
 				<ul>
 					<li><a class="current-page" href="index.html">Home</a></li>
 					<li><a href="portfolio.html">Portfolio</a></li>
 					<li><a href="over-mij.html">Over mij</a></li>
-					<li><a class="button-secundary" href="#footer">Contact</a></li>
+					<li><a class="button-secundary" href="#footer" onclick="lenis.scrollTo('#footer')">Contact</a></li>
 				</ul>
-				<button aria-hidden="true"><img src="./images/hamburger-open.svg" alt="" /></button>
+				<button aria-hidden="true"><img src="./images/open.svg" alt="" /></button>
 			</nav>
 
 		</div>
@@ -50,7 +48,7 @@
 
 
 		<section class="move-up3">
-            <img src="./images/1610test.png" alt="">
+            <img src="./images/ah/ah_large.png" alt="">
 		</section>
 
 
@@ -76,9 +74,10 @@
             <div>
                 <p>Na uitgebreid onderzoek te hebben gedaan naar de gebruiker en de huidige customer journey is er op basis van deze resultaten een conceptrichting bedacht. Dit concept bestaat uit een digitale bestelzuil. Deze bestelzuil is geïntegreerd met de website van de AH Deals, waardoor gebruikers hier het gehele aanbod aan deals kunnen bekijken. Gebruikers kunnen hier hun bonuskaart scannen om gepersonaliseerde deals te zien die worden voorgesteld op basis van de informatie op de bonuskaart. Wanneer gebruikers een deal al direct willen afrekenen in de winkel is dit ook mogelijk, ook hier wordt heel slim gebruik gemaakt van de bonuskaart. Tevens is er een advies uitgebracht over de plaatsing van deze zuil in de winkel, zodat deze zich op een logische plek binnen de customer journey bevindt.</p>
                 <p>Tijdens het project is onder andere een Lo-Fi, Me-Fi en Hi-Fi ontwerp gemaakt van dit concept, deze versies zijn tussentijds meerdere malen getest om het concept aan te scherpen. Het gehele onderzoeksrapport met hierin de gebruikte methoden en gevonden resultaten kan hieronder worden gedownload.</p>
-                <button class="button-primary">Bekijk het proces</button>
-                <img src="./images/1610test.png" alt="">
-                <img src="./images/1610test.png" alt="">
+                <a class="button-primary" href="https://docs.google.com/document/d/1cIBXPACcpRLcE-CJX_ezQPj2qK7uaE-KogNy_fPEp1M/edit?usp=sharing" target="_blank">Bekijk het proces</a>
+                <img src="./images/ah/ah1.png" alt="">
+                <img src="./images/ah/ah2.png" alt="">
+				<img src="./images/ah/ah3.png" alt="">
             </div>
 
         </section>
@@ -110,21 +109,40 @@
 			<div>
 				<h2>Kom met mij in <span>contact</span></h2>
 				<p>Wil je met mij in contact komen of heb je een andere vraag?<br>Stuur me gerust een mail of een berichtje op LinkedIn!</p>
-				<a class="button-secundary" href="">E-mail</a>
-				<a class="button-secundary" href="">LinkedIn</a>
+				<a class="button-secundary" href="mailto: larsdevries16@gmail.com">E-mail</a>
+				<a class="button-secundary" href="https://www.linkedin.com/in/vriesdelars/" target="_blank">LinkedIn</a>
 			</div>
 	
 			<div>
-				<p>Lars de Vries</p>
-				<p>2023</p>
+				<p>© Lars de Vries</p>
+				<p id="current-year"></p>
 			</div>
 		</div>
 	</footer>
 
 
+	<div id="trailer">
+		<img src="./images/cursor-arrow.svg" alt="">
+	</div>
 
 
 	<script src="scripts/script.js"></script>
+	<script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+	<script>
+	// Lenis SmoothScroll
+		const lenis = new Lenis()
+		
+		lenis.on('scroll', (e) => {
+		  console.log(e)
+		})
+		
+		function raf(time) {
+		  lenis.raf(time)
+		  requestAnimationFrame(raf)
+		}
+		
+		requestAnimationFrame(raf)
+	</script>
 </body>
 	
 </html>
