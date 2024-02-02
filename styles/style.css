@@ -42,19 +42,25 @@ html{
 
   --color-borders: #F2F0E830;
 
-  --color-text-buttons: #F2F0E880;
-  --color-buttons: #F2F0E815;
+  --color-text-buttons: #F2F0E890;
+  --color-buttons: #F2F0E810;
+  /* --color-buttons: #00000025; */
   --color-buttons-hover: #BFFF0F;
   --color-text-buttons-hover: #272F3F;
 
   --color-menu: #BFFF0F;
 
-
   --color-cursor: #BFFF0F;
-
 }
 
 
+header a {
+  transition: 0.4s;
+}
+
+header a:hover {
+  color: var(--color-headings);
+}
 
 
 
