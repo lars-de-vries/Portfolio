@@ -31,25 +31,25 @@ html{
 
 :root {
   --color-headings: #F2F0E8;
-  --color-background: #272F3F;
-  --color-text: #F2F0E880;
+  /* --color-background: #272F3F; */
+  --color-background: #1f2322;
+  --color-text: #F2F0E890;
 
   --color-footer-background: #F2F0E8;
-  --color-footer-headings: #272F3F;
-  --color-footer-text: #272F3F95;
-  --color-footer-border: #272F3F30;
+  /* --color-footer-headings: #272F3F; */
+  --color-footer-headings: #1f2322;
+  --color-footer-text: #1f232295;
+  --color-footer-border: #1f232250;
 
 
-  --color-borders: #F2F0E830;
+  --color-borders: #F2F0E850;
 
   --color-text-buttons: #F2F0E890;
-  --color-buttons: #F2F0E810;
-  /* --color-buttons: #00000025; */
+  --color-buttons: #F2F0E8;
   --color-buttons-hover: #BFFF0F;
-  --color-text-buttons-hover: #272F3F;
+  --color-text-buttons-hover: #1f2322;
 
   --color-menu: #BFFF0F;
-
   --color-cursor: #BFFF0F;
 }
 
@@ -78,7 +78,7 @@ h1, h2 {
 h3 {
   font-family: "larken", sans-serif;
   color: var(--color-headings);
-  font-size: clamp(1.125rem, 1.6vw, 2rem);
+  font-size: clamp(1.25rem, 1.6vw, 2rem);
   font-weight: 300;
   margin: 0;
 }
@@ -137,7 +137,8 @@ button {
 .button-primary {
   display: inline-block;
   color: var(--color-text-buttons);
-  padding: 1em 1.75em;
+  color: var(--color-text-buttons-hover);
+  padding: 0.8em 1.6em;
   background: var(--color-buttons);
   border-radius: 50px;
   text-decoration: none;
@@ -154,7 +155,7 @@ button {
   display: inline-block;
   color: var(--color-text);
   /* padding: 1.25em 2em; */
-  padding: 1em 1.75em;
+  padding: 0.8em 1.6em;
   background: none;
   border: 1px solid var(--color-borders);
   border-radius: 50px;
@@ -543,11 +544,12 @@ section:first-of-type {
 .text-2kolom div {
   display: flex;
   flex-direction: column;
-  gap: 2.5em;
+  /* gap: 2.5em; */
+  gap: 3em;
   align-items: flex-start;
 }
 
-.text-2kolom div > button, .text-2kolom div > a{
+.text-2kolom div > button, .text-2kolom div > .button-primary{
   margin-bottom: 5em;
 }
 
@@ -676,6 +678,24 @@ section:first-of-type {
 
 
 
+
+
+
+.over-mij-page ul li{
+  font-family: "Satoshi", sans-serif;
+  color: var(--color-text);
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  line-height: 1.5;
+  margin: 0;
+  font-weight: 400;
+
+  text-decoration: none;
+}
+
+
+.over-mij-page ul li:before {
+  content: '✓ ';
+}
 
 
 
