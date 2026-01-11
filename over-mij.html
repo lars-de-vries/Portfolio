@@ -37,19 +37,16 @@
 	<main class="over-mij-page">
 
 		<section>
-			<h1 class="move-up1">Over <span>mij</span></h1>
-			<p class="move-up2">Recent cum laude afgestudeerd in Communication & Multimedia Design aan de Hogeschool van Amsterdam. Op deze pagina vertel ik je graag wat meer over wie ik ben en wat ik te bieden heb als UX/UI designer.</p>
+			<h1 class="title">Over <span>mij</span></h1>
+			<p class="fade-item">Recent cum laude afgestudeerd in Communication & Multimedia Design aan de Hogeschool van Amsterdam. Op deze pagina vertel ik je graag wat meer over wie ik ben en wat ik te bieden heb als UX/UI designer.</p>
 			<!-- <p class="move-up2">Een creatieve en enthousiaste tweedejaars Communication & Multimedia Design (CMD) student aan de Hogeschool van Amsterdam. Op deze pagina wil ik je verder laten kennismaken met wie ik ben en aangeven wat ik allemaal kan.</p> -->
 		</section>
 
 
 
 
-
-
-
-		<section  class="move-up3">
-            <img src="./images/overmij_large.png" alt="Afbeelding van Lars">
+		<section>
+            <img class="fade-image" src="./images/overmij_large.png" alt="Afbeelding van Lars">
 		</section>
 
 
@@ -58,9 +55,9 @@
 
         <section class="text-2kolom">
             
-            <h2>Wie ik <span class="italic-text">ben</span></h2>
+            <h2 class="title">Wie ik <span class="italic-text">ben</span></h2>
 
-            <div>
+            <div class="fade-item">
                 <p>Mijn naam is Lars de Vries, 25 jaar oud en woonachtig in het Noord-Hollandse Heiloo. Ik zie mijzelf als een rustig en positief ingesteld persoon die niet snel een uitdaging uit de weg gaat. Tijdens mijn studie Communication & Multimedia Design (CMD) ontdekte ik hoe goed mijn oog voor detail, analytisch denkvermogen en creativiteit samenkomen binnen het vakgebied van UX/UI design.</p>
 				<p>CMD is echter al mijn tweede hbo-opleiding, eerder behaalde ik mijn bachelor in Logistics Engineering. Door deze combinatie heb ik niet alleen oog voor de creatieve kant van een ontwerp, maar denk ik ook graag mee over de praktische en technische uitvoering ervan.</p>
                 <p>Naast werk vind ik ontspanning ook erg belangrijk, zo houd ik onder andere van het kijken van goede films en vind ik het gezellig om af en toe een borrel te drinken om bij te praten met vrienden. Zij beschrijven mij als een nauwkeurig en betrouwbaar persoon op wie zij kunnen rekenen.</p>
@@ -79,25 +76,22 @@
 
 
 
-
         <section class="wat-ik-kan">
-        
-            <h2>Wat ik <span class="italic-text">kan</span></h2>
-
+            <h2 class="title">Wat ik <span class="italic-text">kan</span></h2>
             <div>
-                <div>
+                <div class="fade-item">
                     <h4>01</h4>
                     <h3>Visual Design</h3>
                     <p>Als designer houd ik ervan om visueel aantrekkelijke producten te ontwerpen. Ik heb veel ervaring met het maken van digitale prototypes, hiermee breng ik mijn creatieve ideeën en concepten tot leven. Een succesvol visueel ontwerp draagt bij aan de algehele gebruikerservaring en kan ervoor zorgen dat bepaalde bedrijfsdoelen worden behaald, bijvoorbeeld dat gebruikers meer producten afnemen of langer op jouw platform blijven hangen.</p>
                 </div>
     
-				<div>
+				<div class="fade-item">
                     <h4>02</h4>
                     <h3>UX Research & Design</h3>
                     <p>Naast dat digitale producten er aantrekkelijk uit zien, is het ook ontzettend belangrijk dat deze intuïtief en effectief zijn in het vervullen van de wensen en behoeften van de gebruiker. Met behulp van onderzoek, waarbij verschillende methoden worden toegepast, kan ik in de huid van deze gebruiker kruipen. Dit is van groot belang, een goed onderzoek is namelijk de basis van een passend en effectief ontwerp.</p>
                 </div>
 
-                <div>
+                <div class="fade-item">
                     <h4>03</h4>
                     <h3>Frontend Development</h3>
                     <p>Ondanks dat ik mij voornamelijk profileer als UX/UI designer kan ik ook overweg met code. Ik kan een eenvoudig ontwerp gemakkelijk omzetten naar een werkende website met behulp van basis HTML, CSS en Javascript. Fun fact: deze portfolio website heb ik ook volledig zelf gecodeerd!</p>
@@ -123,8 +117,8 @@
 
 	<footer>
 		<div id="footer">
-			<div>
-				<h2>Kom met mij in <span>contact</span></h2>
+			<div class="fade-item">
+				<h2 class="title">Kom met mij in <span>contact</span></h2>
 				<p>Wil je met mij in contact komen of heb je een andere vraag?<br>Stuur me gerust een mail of een berichtje op LinkedIn!</p>
 				<a class="button-secundary" href="mailto: larsdevries16@gmail.com">E-mail</a>
 				<a class="button-secundary" href="https://www.linkedin.com/in/vriesdelars/" target="_blank">LinkedIn</a>
@@ -144,6 +138,12 @@
 
 
 	<script src="scripts/script.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+
+
 	<script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
 	<script>
 	// Lenis SmoothScroll

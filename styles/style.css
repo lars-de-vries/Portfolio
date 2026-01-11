@@ -32,7 +32,7 @@ html{
 :root {
   --color-headings: #F2F0E8;
   /* --color-background: #272F3F; */
-  --color-background: #1f2322;
+  --color-background: #141616;
   --color-text: #F2F0E890;
 
   --color-footer-background: #F2F0E8;
@@ -45,7 +45,10 @@ html{
   --color-borders: #F2F0E850;
 
   --color-text-buttons: #F2F0E890;
-  --color-buttons: #F2F0E8;
+
+  /* --color-buttons: #F2F0E8; */
+  --color-buttons: #232726;
+
   --color-buttons-hover: #BFFF0F;
   --color-text-buttons-hover: #1f2322;
 
@@ -71,14 +74,14 @@ header a:hover {
 h1, h2 {
   font-family: "larken", sans-serif;
   color: var(--color-headings);
-  font-size: clamp(2rem, 2.75vw, 3.75rem);
+  font-size: clamp(2rem, 3vw, 4rem);
   font-weight: 400;
 }
 
 h3 {
   font-family: "larken", sans-serif;
   color: var(--color-headings);
-  font-size: clamp(1.25rem, 1.6vw, 2rem);
+  font-size: clamp(1.25rem, 1.75vw, 2rem);
   font-weight: 300;
   margin: 0;
 }
@@ -98,10 +101,11 @@ h4 {
 p, a, button {
   font-family: "Satoshi", sans-serif;
   color: var(--color-text);
-  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  font-size: clamp(1rem, 1.25vw, 1.25rem);
   line-height: 1.5;
   margin: 0;
   font-weight: 400;
+  letter-spacing: 0.01em;
 
   text-decoration: none;
 }
@@ -109,7 +113,6 @@ p, a, button {
 
 p span {
   color: var(--color-borders);
-  font-weight: 400;
 }
 
 
@@ -117,9 +120,14 @@ p span {
 
 h1 span, h2 span, h3 span {
   font-family: "larken", sans-serif;
-  font-weight: 400;
   font-style: italic;
 }
+
+h3 span {
+  color: var(--color-borders);
+}
+
+
 
 @media (max-width: 768px) {
   .current-page {
@@ -136,14 +144,14 @@ button {
 
 .button-primary {
   display: inline-block;
-  color: var(--color-text-buttons);
-  color: var(--color-text-buttons-hover);
+  color: var(--color-headings);
   padding: 0.8em 1.6em;
   background: var(--color-buttons);
   border-radius: 50px;
   text-decoration: none;
   transition: 0.5s ease;
   font-weight: 400;
+
 }
 
 .button-primary:hover {
@@ -195,7 +203,7 @@ header, main, #footer {
 @media (min-width: 1920px) {
 	header, main, #footer{
     padding: 0 12%;
-    max-width: 150em;
+    max-width: 130em;
     margin: 0 auto;
   }
 }
@@ -209,48 +217,15 @@ header, main, #footer {
 
 
 
-main *{
-  opacity: 0;
-  filter: blur(1px);
-  animation-name: fade-in;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-}
 
 
-@keyframes fade-in {
-  100% {
-    opacity: 1;
-    filter: blur(0);
-  }
+.split-word {
+  display: inline-block;
+  will-change: transform, opacity;
 }
 
 
 
-.move-up1, .move-up2, .move-up3{
-  transform: translateY(70px);
-  animation-name: move-up;
-  animation-duration: 0.8s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-out;
-  
-}
-
-.move-up2 {
-  animation-delay: 0.4s;
-}
-
-.move-up3 {
-  animation-delay: 0.8s;
-}
-
-@keyframes move-up {
-  100% {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateY(0) rotate(0);
-  }
-}
 
 
 
@@ -259,18 +234,19 @@ main *{
 /*      HEADER      */
 /********************/
 
+
 header a > img {
   height: 32px;
   height: clamp(2.25rem, 2.5vw, 3.5rem);
   position: relative;
   z-index: 99;
-  margin-top: 1em;
+  margin-top: 0.6em;
 }
 
 
 
 header button {
-  padding: 1em;
+  padding: 0.8em;
   border: 1px solid var(--color-borders);
   background: var(--color-background);
   border-radius: 50px;
@@ -302,7 +278,8 @@ header ul {
   bottom:0;
 
   transform: translateX(100%);
-  transition: transform 1s;
+  transition: transform 0.6s;
+  transition-timing-function: ease-in-out;
 
   display: flex;
   flex-direction: column;
@@ -328,6 +305,8 @@ header ul li:last-of-type {
 
 nav.menu-active ul {
   transform: translatex(0);
+  transition-timing-function: ease-in-out;
+
 }
 
 
@@ -371,7 +350,7 @@ nav.menu-active button img {
   }
 
   header li a {
-    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    font-size: clamp(1rem, 1.25vw, 1.25rem);
     font-family: "satoshi", sans-serif;
     color: var(--color-text);
   }
@@ -402,19 +381,19 @@ footer {
   background: var(--color-footer-background);
 }
 
-footer div div:nth-of-type(1) {
+footer > div > div:nth-of-type(1) {
   padding: 4em 0;
 }
 
-footer div div:nth-of-type(1) p{
+footer > div > div:nth-of-type(1) p{
   margin-bottom: 2em;
 }
 
-footer div div:nth-of-type(1) a:nth-of-type(2){
+footer > div > div:nth-of-type(1) a:nth-of-type(2){
   margin-left: 0.5em;
 }
 
-footer div div:nth-of-type(2) {
+footer > div > div:nth-of-type(2) {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -423,7 +402,7 @@ footer div div:nth-of-type(2) {
 }
 
 
-footer div div:nth-of-type(2) p {
+footer > div > div:nth-of-type(2) p {
   font-size: clamp(0.75rem, 1vw, 1.25rem);
 }
 
@@ -470,23 +449,36 @@ section:first-of-type {
 
 .hero h1 {
   margin: 0;
+
+  /* TEST */
+  font-size: clamp(1.25rem, 1.6vw, 2rem);
+  font-weight: 300;
+  color: var(--color-text);
 }
 
 .hero p {
   font-family: "larken", sans-serif;
   color: var(--color-text);
-  font-size: clamp(1.5rem, 2.75vw, 3.75rem);
-  font-weight: 300;
+  font-weight: 400;
   margin-top: 0.25em;
   margin-bottom: 0.5em;
+
+  /* TEST */
+  color: var(--color-headings);
+  font-size: clamp(2rem, 3.75vw, 4rem);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 700px) {
   .hero p{
-    width: 80%;
+    width: 85%;
   }
 }
 
+@media (min-width: 2200px) {
+  .hero p{
+    width: 70%;
+  }
+}
 
 
 
@@ -580,13 +572,10 @@ section:first-of-type {
 
 
 
-
-
-
 .projecten-2kolom > div {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 5rem;
 }
 
 @media (min-width: 768px) {
@@ -608,22 +597,23 @@ section:first-of-type {
   object-fit: cover;
 }
 
-.project-image:hover img {
+.cursor-arrow:hover .project-image img {
   transform: scale(1.1);
 }
 
-.projecten p, .projecten-2kolom p {
-  font-weight: 400;
+
+
+.projecten h3, .projecten-2kolom h3 {
   color: var(--color-headings);
-  margin-top: 0.5em;
-}
-
-.projecten p span, .projecten-2kolom p span {
-  margin-left: 1em;
+  margin: 1em 0 0.5em 0;
 }
 
 
-
+@media (min-width: 768px) {
+  .projecten p {
+    width: 60%;
+  }
+}
 
 
 
@@ -652,7 +642,7 @@ section:first-of-type {
 
 
 .portfolio-page section:nth-of-type(2) > div {
-  margin-bottom: 3em;
+  margin-bottom: 5em;
 }
 
 
@@ -800,6 +790,5 @@ html.lenis {
 /* a {
   font-size: 16px !important;
 } */
-
 
 

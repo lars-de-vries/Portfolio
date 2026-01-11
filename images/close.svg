@@ -1,9 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
-  <g id="Group_638" data-name="Group 638" transform="translate(-1675.762 -198)">
-    <circle id="Ellipse_10" data-name="Ellipse 10" cx="15" cy="15" r="15" transform="translate(1675.762 198)" fill="none"/>
-    <g id="Icon_feather-menu" data-name="Icon feather-menu" transform="translate(1682.098 199.404)">
-      <path id="Path_2149" data-name="Path 2149" d="M4.5,9H22.691" transform="translate(5.846 -1.95) rotate(45)" stroke="#272f3f" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-      <path id="Path_2150" data-name="Path 2150" d="M0,0H18.191" transform="translate(15.527 7.596) rotate(135)" stroke="#272f3f" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-    </g>
-  </g>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_2103_24641)">
+<path d="M7.19922 7.2002L17.4896 17.4906Z" fill="black"/>
+<path d="M7.19922 7.2002L17.4896 17.4906" stroke="#1F2322" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17.4902 7.2002L7.19985 17.4906Z" fill="black"/>
+<path d="M17.4902 7.2002L7.19985 17.4906" stroke="#1F2322" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_2103_24641">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
 </svg>

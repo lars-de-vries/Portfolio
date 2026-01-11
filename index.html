@@ -27,7 +27,7 @@
 					<li><a href="over-mij.html">Over mij</a></li>
 					<li><a class="button-secundary" href="#footer" onclick="lenis.scrollTo('#footer')">Contact</a></li>
 				</ul>
-				<button aria-hidden="true"><img src="./images/open.svg" alt="" /></button>
+				<button aria-hidden="true"><img src="../images/open.svg" alt=""></button>
 			</nav>
 
 		</div>
@@ -37,31 +37,31 @@
 	<main class="home-page">
 
 		<section class="hero">
-			<h1 class="move-up1">Lars de Vries - <span>UX / UI designer</span></h1>
-			<p class="move-up2">Met een scherp oog voor detail creëer ik intuïtieve en visueel aantrekkelijke digitale ervaringen.</p>
+			<h1 class="title">Hi, ik ben <span>Lars..</span></h1>
+			<p class="title">Een designer die zich richt op het creëren van intuïtieve digitale ervaringen.</p>
 			<!-- <p>Met een scherp oog voor details en een passie voor perfectie, geef ik vorm aan digitale ervaringen.</p> -->
 			<!-- <p>Met een scherp oog voor details en een passie voor perfectie maak ik prachtige digitale creaties.</p> -->
-			<a class="button-primary move-up3" href="portfolio.html">Bekijk mijn werk</a>
+			<a class="button-primary fade-item" href="portfolio.html">Bekijk mijn werk</a>
 		</section>
 
 
         <!-- wat ik kan - section -->
         <section class="wat-ik-kan">
-            <h2>Wat ik <span class="italic-text">kan</span></h2>
+            <h2 class="title">Wat ik <span class="italic-text">kan</span></h2>
             <div>
-                <div>
+                <div class="fade-item">
                     <h4>01</h4>
                     <h3>Visual Design</h3>
                     <p>Als designer houd ik ervan om visueel aantrekkelijke producten te ontwerpen. Ik heb veel ervaring met het maken van digitale prototypes, hiermee breng ik mijn creatieve ideeën en concepten tot leven. Een succesvol visueel ontwerp draagt bij aan de algehele gebruikerservaring en kan ervoor zorgen dat bepaalde bedrijfsdoelen worden behaald, bijvoorbeeld dat gebruikers meer producten afnemen of langer op jouw platform blijven hangen.</p>
                 </div>
     
-				<div>
+				<div class="fade-item">
                     <h4>02</h4>
                     <h3>UX Research & Design</h3>
                     <p>Naast dat digitale producten er aantrekkelijk uit zien, is het ook ontzettend belangrijk dat deze intuïtief en effectief zijn in het vervullen van de wensen en behoeften van de gebruiker. Met behulp van onderzoek, waarbij verschillende methoden worden toegepast, kan ik in de huid van deze gebruiker kruipen. Dit is van groot belang, een goed onderzoek is namelijk de basis van een passend en effectief ontwerp.</p>
                 </div>
 
-                <div>
+                <div class="fade-item">
                     <h4>03</h4>
                     <h3>Frontend Development</h3>
                     <p>Ondanks dat ik mij voornamelijk profileer als UX/UI designer kan ik ook overweg met code. Ik kan een eenvoudig ontwerp gemakkelijk omzetten naar een werkende website met behulp van basis HTML, CSS en Javascript. Fun fact: deze portfolio website heb ik ook volledig zelf gecodeerd!</p>
@@ -73,20 +73,30 @@
 
 
 		<section class="projecten-2kolom">
-			<h2>Recent <span>werk</span></h2>
+			<h2 class="title">Recent <span>werk</span></h2>
 			<div>
-				<div>
+				<div class="fade-image cursor-arrow">
 					<div class="project-image">
-						<a href="mijnmatch.html"><img class="cursor-arrow" src="./images/mijnmatch/mijnmatch_large.png" alt="Etos Mijn Match interface overzicht"></a>
+						<a href="mijnmatch.html"><img src="./images/mijnmatch/mijnmatch_large.png" alt="Etos Mijn Match interface overzicht"></a>
 					</div>
-					<p>Etos Mijn Match <span>2025</span></p>
+					<div>
+						<a href="mijnmatch.html">
+							<h3>Etos Mijn Match<span> - 2025</span></h3>
+							<p>Een omnichannel oplossing die klanten van Etos ondersteunt bij het vinden van producten die écht bij hun passen.</p>
+						</a>
+					</div>
 				</div>
 	
-				<div>
+				<div class="fade-image cursor-arrow">
 					<div class="project-image">
 						<a href="datapaw.html"><img class="cursor-arrow" src="./images/datapaw/datapaw_large.png" alt="Data Paw interface overzicht"></a>
 					</div>
-					<p>Data Paw <span>2024</span></p>
+					<div>
+						<a href="datapaw.html">
+							<h3>Data Paw<span> - 2024</span></h3>
+							<p>Een interventie die HvA-medewerkers stimuleert hun digitale bestanden op te schonen om energieverbruik te verminderen.</p>
+						</a>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -100,8 +110,8 @@
 
 	<footer>
 		<div id="footer">
-			<div>
-				<h2>Kom met mij in <span>contact</span></h2>
+			<div class="fade-item">
+				<h2 class="title">Kom met mij in <span>contact</span></h2>
 				<p>Wil je met mij in contact komen of heb je een andere vraag?<br>Stuur me gerust een mail of een berichtje op LinkedIn!</p>
 				<a class="button-secundary" href="mailto: larsdevries16@gmail.com">E-mail</a>
 				<a class="button-secundary" href="https://www.linkedin.com/in/vriesdelars/" target="_blank">LinkedIn</a>
@@ -136,6 +146,12 @@
 
 
 	<script src="scripts/script.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+
+
 	<script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
 	<script>
 	// Lenis SmoothScroll
@@ -152,6 +168,9 @@
 		
 		requestAnimationFrame(raf)
 	</script>
+
+
+
 </body>
 	
 </html>

@@ -45,9 +45,6 @@ window.onmousemove = e => {
 
 
 
-
-
-
 // GOEDE VERSIE
 
 // var image = document.querySelector('.cursor-arrow');
@@ -67,8 +64,6 @@ window.onmousemove = e => {
 //   trailer.classList.remove("trailer-hover");
 
 // });
-
-
 
 
 
@@ -103,3 +98,115 @@ for (var i=0; i<image.length; i++) {
 window.onload = e => {
   document.getElementById("current-year").innerHTML = new Date().getFullYear();
 }
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger, SplitText);
+
+  
+  /* =========================
+     HERO (page load)
+  ========================= */
+
+  // gsap.from(".hero", {
+  //   opacity: 0,
+  //   y: 50,
+  //   duration: 1.4,
+  //   ease: "power3.out",
+  //   stagger: 0.15,
+  //   delay: 0.2
+  // });
+
+  //   gsap.from(".hero > a", {
+  //   opacity: 0,
+  //   y: 50,
+  //   duration: 1.4,
+  //   ease: "power3.out",
+  //   delay: 0.2
+  // });
+
+  /* =========================
+     SPLIT TEXT TITLES
+  ========================= */
+
+  const titles = document.querySelectorAll(".title");
+
+  titles.forEach(title => {
+    const split = new SplitText(title, {
+      type: "words",
+      wordsClass: "split-word"
+    });
+
+    gsap.from(split.words, {
+      scrollTrigger: {
+        trigger: title,
+        start: "top 80%",
+        toggleActions: "play none none none"
+      },
+      y: 50,
+      filter: "blur(2px)",
+      opacity: 0,
+      duration: 1.8,
+      ease: "power3.out",
+      stagger: 0.04
+    });
+  });
+
+  /* =========================
+     ALGEMENE FADE-IN
+     (NIET hero & titles)
+  ========================= */
+
+  const fadeElements = document.querySelectorAll(".fade-item");
+
+  fadeElements.forEach(el => {
+    gsap.from(el, {
+      scrollTrigger: {
+        trigger: el,
+        start: "top 80%"
+      },
+      opacity: 0,
+      y: 5,
+      filter: "blur(1px)",
+      duration: 1.2,
+      ease: "power3.inOut"
+    });
+  });
+
+
+
+  /* =========================
+    IMAGE FADE-IN
+  ========================= */
+
+  const fadeImages = document.querySelectorAll(".fade-image");
+
+  fadeImages.forEach(el => {
+    gsap.from(el, {
+      scrollTrigger: {
+        trigger: el,
+        start: "top 80%"
+      },
+      opacity: 0,
+      y: 5,
+      filter: "blur(2px)",
+      duration: 1.2,
+      ease: "power3.inOut"
+    });
+  });
+
+});
+
+
+
+
+/* 
+delay: 0.4,
+y: 5,
+*/
+
+
+
